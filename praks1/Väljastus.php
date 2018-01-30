@@ -5,12 +5,17 @@
  * Date: 30.01.2018
  * Time: 10:24
  */
-// üherealine kommentaar
+// Üherealine kommentaar
 /*
  * mitme
  * realine
  * kommentaar
  */
-//väljastamine
-echo 'Aine - veebiprogrameerimine'.'<br />'; //käsu lõpp on semikoolon;
+// Väljastamine
+echo 'Aine - veebiprogrameerimine'.'<br />'; // Käsu lõpp on semikoolon;
 print 'valikaine<br />';
+// Muutujate defineerimine
+$eesNimi = 'Renar'; // Eesnimi, string
+$pereNimi = 'Saaremets'; // Perekonnanimi, string
+$bussiNumber = 4; // Bussi number 4, integer
+$soiduKestvus = 0.8; // Sõidu kestvus, 0.8 tundi, float
