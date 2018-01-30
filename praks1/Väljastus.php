@@ -11,5 +11,6 @@
  * realine
  * kommentaar
  */
-
-
+//väljastamine
+echo 'Aine - veebiprogrameerimine'.'<br />'; //käsu lõpp on semikoolon;
+print 'valikaine<br />';
