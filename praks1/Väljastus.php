@@ -24,7 +24,15 @@ define('NUMBER_PI', 3.14);
 /*Kasutades eel defineeritud muutujad ja konstandid
 väljasta ilusa teksti*/
 echo 'Olen '.$eesNimi.' '.$pereNimi.'<br />';
-echo 'Sõidan koolist kesklinne bussiga number' .$bussiNumber. '<br />';
+echo 'Sõidan koolist kesklinne bussiga number ' .$bussiNumber. '<br />';
 echo 'Jõuan kesklinne ' .$soiduKestvus.' tunniga <br/>';
 echo 'Midagi konstantset? PI = '.NUMBER_PI. '<br />';
-
+// Tingimuslaused
+$ilmValjas = 'sajab lund';
+if($ilmValjas == 'sajab lund'){
+    echo 'Tuleb minna sauna<br />';
+} else {
+    echo 'Pole mõtet sauna minna<br />';
+}
+// ? Operaator - ternany operator
+echo($ilmValjas == 'sajab lund') ? 'Tuleb minna sauna<br />' : 'Pole mõtet sauna minna<br />';
