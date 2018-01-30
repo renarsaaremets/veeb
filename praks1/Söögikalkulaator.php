@@ -16,6 +16,5 @@ if($soogiHind > 0 and $soodustuseProtsent > 0 and $opilaseToetus > 0){
     echo 'Söögihind õpilasele = '.$hindOpilasele.'<br />';
 } else {
     echo 'Andmed ei ole täielikud<br />';
-
 }
 
