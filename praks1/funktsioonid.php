@@ -28,3 +28,21 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
 } // Funktsioon lõppeb
 
 // Funktisoon vormi väljastamiseks
+// Vormi hoiame vorm.html failis
+// Vormi sisu loeme antud failist ja väljastame
+function loeVormFailist($failinimi){
+    // Siia salvestame sisu
+    $sisu = '';
+    // Kontrollime vajaliku faili olemasolu
+    if (file_exists($failinimi) and is_file($failinimi) and is_readable($failinimi)){
+        // Saab failist lugeda
+        $fp = fopen($failinimi, mode:'r'); // Tekitame ühenduse failiga
+        // Loeme failist täissisu
+        $sisu = fread($fp, filesize($failinimi));
+        fclose($fp); // Ühendus failiga kinni
+    } else {
+        echo 'Probleem '.$failinimi.' failiga <br/>';
+        exit;
+    }
+    echo $sisu
+}
