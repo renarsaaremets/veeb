@@ -51,9 +51,28 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
          'opilaskaart' => false
      )
     );
+// Erinevad söögid
+      $praed = array(
+          array(
+              'nimetus' =>  'Snitsel',
+              'kirjeldus' =>  'Snitsel sealihast, lisand, kaste, salat, leib',
+              'hind' =>   2.68 // EUR
+          ),
+          array(
+              'nimetus' =>  'Snitsel',
+              'kirjeldus' =>  'Snitsel sealihast, lisand, kaste, salat, leib',
+              'hind' =>   2.68 // EUR
+          ),
+      );
 // vaatame $kasutajad massivi läbi
 // for (tjm defineermine; tegevuse kontroll, suurendamine/vähendamine)
+foreach ($praed as $praad) {
+    echo '<h1>' . $praad['nimetus'] . '</h1>';
+    echo '<code>'.$praad['kirjeldus'].'</code><br />';
+    echo '<ul>';
 foreach ($kasutajad as $kasutaja){
- $soogiHind = soogiHind(2.65, $kasutajad['soodus'], $kasutaja['opilaskaart']);
- echo 'Prae hind '.$kasutaja['roll'].' = '.round($soogiHind, 2).' €<br />';
+    $soogiHind = soogiHind($praad['hind'], $kasutajad['soodus'], $kasutaja['opilaskaart']);
+    echo '<dd>Prae hind '.$kasutaja['roll']. ' = '.round($soogiHind, 2). '€</dd><br />';
     }
+            echo '</ul>';
+}
