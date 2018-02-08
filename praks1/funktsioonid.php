@@ -36,7 +36,7 @@ function loeVormFailist($failinimi){
     // Kontrollime vajaliku faili olemasolu
     if (file_exists($failinimi) and is_file($failinimi) and is_readable($failinimi)){
         // Saab failist lugeda
-        $fp = fopen($failinimi, mode:'r'); // Tekitame ühenduse failiga
+        $fp = fopen($failinimi, 'r'); // Tekitame ühenduse failiga
         // Loeme failist täissisu
         $sisu = fread($fp, filesize($failinimi));
         fclose($fp); // Ühendus failiga kinni
@@ -44,5 +44,5 @@ function loeVormFailist($failinimi){
         echo 'Probleem '.$failinimi.' failiga <br/>';
         exit;
     }
-    echo $sisu
+    echo $sisu;
 }

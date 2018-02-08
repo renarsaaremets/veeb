@@ -25,7 +25,7 @@ define('NUMBER_PI', 3.14);
 väljasta ilusa teksti*/
 echo 'Olen '.$eesNimi.' '.$pereNimi.'<br />';
 echo 'Sõidan koolist kesklinne bussiga number ' .$bussiNumber. '<br />';
-echo 'Jõuan kesklinne ' .$soiduKestvus.' tunniga <br/>';
+echo 'Jõuan kesklinne ' .$soiduKestvus.' tunniga <br />';
 echo 'Midagi konstantset? PI = '.NUMBER_PI. '<br />';
 // Tingimuslaused
 $ilmValjas = 'sajab lund';

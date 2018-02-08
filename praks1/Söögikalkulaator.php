@@ -6,6 +6,14 @@
  * Time: 11:28
  */
 require_once 'funktsioonid.php'; // Sellega nõuame ligipääsu failile, kus on kõik väärtused oleamas
+
+// Väljastame htmli-i vorm
+loeVormFailist('vorm.html');
+
+var_dump($_POST);
+echo  '<pre>';
+print_r($_POST);
+echo  '</pre>';
 // Testimiseks paneme erinevad väärtused paika
 // Kasutame selleks massivi kujul (sooduskaart, kasoledõpilane)
 //
@@ -38,9 +46,9 @@ require_once 'funktsioonid.php'; // Sellega nõuame ligipääsu failile, kus on 
               'hind' =>   2.68 // EUR
           ),
           array(
-              'nimetus' =>  'Snitsel',
-              'kirjeldus' =>  'Snitsel sealihast, lisand, kaste, salat, leib',
-              'hind' =>   2.68 // EUR
+              'nimetus' =>  'Sealiha',
+              'kirjeldus' =>  'Sealiha sealihast, lisand, kaste, salat, leib',
+              'hind' =>   2.55 // EUR
           ),
       );
 // vaatame $kasutajad massivi läbi
