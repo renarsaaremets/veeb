@@ -5,28 +5,7 @@
  * Date: 30.01.2018
  * Time: 11:28
  */
-// Funktsioon soodustuse määramiseks
-/**
- * Kolm parameetrit:
- * @param $taisHind
- * @param $soodusKaart
- * @param $kasOledOpilane
- */
-function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
-    // Funktsiooni sisu
-    $soodustuseProtsent = 15; // %
-    $soodusHind = $taisHind ;
-    $opilaseToetus = 1.80; // EURG
-    if($soodusKaart) {
-        $soodusHind = $taisHind * ((100 - $soodustuseProtsent) / 100);
-    }
-    if($kasOledOpilane){
-        $soodusHind = $soodusHind - $opilaseToetus;
-        // $soodusHind -= $opilaseToetus; // - Operaatori lühendatud kuju
-    }
-    return $soodusHind;
-} // Funktsioon lõppeb
-
+require_once 'funktsioonid.php'; // Sellega nõuame ligipääsu failile, kus on kõik väärtused oleamas
 // Testimiseks paneme erinevad väärtused paika
 // Kasutame selleks massivi kujul (sooduskaart, kasoledõpilane)
 //
