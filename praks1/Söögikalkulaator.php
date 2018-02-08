@@ -29,16 +29,21 @@ function soogiHind($taisHind, $soodusKaart = false, $kasOledOpilane = false){
 
 // Testimiseks paneme erinevad väärtused paika
 // Kasutame selleks massivi kujul (sooduskaart, kasoledõpilane)
-    $opilane = array(true, true); // Olemas soodus $opilane[0] ja oled õpilane $opilane[1]
-    $opetaja = array(true, false); // Olemas soodus
-    $kulaline = array(false, false); // Mitte kumbki
-// Kutsume funktsiooni tööle
-// Kui oled õpilane
-$soogiHind = soogiHind(2.65, $opilane[0], $opilane[1]);
-echo 'Prae hind Õpilasele = '.round($soogiHind, 2).' €<br />';
-// Kui olemas kliendi kaart, aga pole õpilane
-$soogiHind = soogiHind(2.65, $opetaja[0], $opetaja[1]);
-echo 'Prae hind sooduskaardi omanikule  = '.round($soogiHind, 2).' €<br />';
-// Kui ei ole kliendi kaarti
-$soogiHind = soogiHind(2.65, $kulaline[0], $kulaline[1]); // "False" vaja kui reas 15, funktisoonis on see kirjas
-echo 'Prae hind = '.round($soogiHind, 2).' €<br />';
+//
+// Kasutajad on massiivi tabelis, kus
+// 1. real õpilase andmed
+// 2. real õpetaja andmed
+// 3. real külalise andemd
+    $kasutajad = array(
+     array(true, true),
+     array(true, false),
+     array(false, false)
+    );
+// vaatame $kasutajad massivi läbi
+// for (tjm defineermine; tegevuse kontroll, suurendamine/vähendamine)
+for($i = 0; $i < count($kasutajad); $i++)
+{
+    // Kutsume funktsiooni tööle
+    $soogiHind = soogiHind(2.65, $kasutajad[$i][0], $kasutajad[$i][1]);
+    echo 'Prae hind = '.round($soogiHind, 2).' €<br />';
+}
