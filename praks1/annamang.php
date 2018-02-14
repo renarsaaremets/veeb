@@ -41,3 +41,6 @@ if(!empty($_POST['kasutajaarv'])) {
     echo 'arv peab olema sisestatud';
 }
     // Kontrolllime, kas arv on sobilik
+
+
+//OK
