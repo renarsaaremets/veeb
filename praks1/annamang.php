@@ -17,8 +17,9 @@ echo'
 
     // Kontrolllime, kas arv on edastatud
 if(!empty($_POST['kasutajaarv'])) {
+    // määrame arvu
     $serveriArv = 10;
-    $kasutajaArv = $_POST['kasutajaArv'];}
+    $kasutajaArv = $_POST['kasutajaArv'];
     if($kasutajaArv > $serveriArv) {
         echo 'Pakutud väärtus on suurem <br />';
     }
@@ -28,7 +29,7 @@ if(!empty($_POST['kasutajaarv'])) {
     if (abs($kasutajaArv-$serveriArv)<=5) {
         if($kasutajaArv == $serveriArv){
             echo 'Arvasid ära !!<br />';
-            echo 'Arv on '.$serveriArv. <br />;
+            echo 'Arv on '.$serveriArv. '<br />';
             exit;
     }
 
