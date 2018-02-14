@@ -13,7 +13,30 @@ echo'
 ';
 
     // Määrame arvu
+
+
+    // Kontrolllime, kas arv on edastatud
+if(!empty($_POST['kasutajaarv'])) {
     $serveriArv = 10;
-    $kasutajaArv = $_POST['kasutajaArv'];
-    // Kontrolllime
-echo $kasutajaArv;
+    $kasutajaArv = $_POST['kasutajaArv'];}
+    if($kasutajaArv > $serveriArv) {
+        echo 'Pakutud väärtus on suurem <br />';
+    }
+    if ($kasutajaArv < $serveriArv) {
+        echo 'Pakutud väärtus on väiksem <br />';
+    }
+    if (abs($kasutajaArv-$serveriArv)<=5) {
+        if($kasutajaArv == $serveriArv){
+            echo 'Arvasid ära !!<br />';
+            echo 'Arv on '.$serveriArv. <br />;
+            exit;
+    }
+
+
+    echo 'Oled juba lähedal <br />';
+    }
+
+} else {
+    echo 'arv peab olema sisestatud';
+}
+    // Kontrolllime, kas arv on sobilik
