@@ -20,3 +20,16 @@ function yhendus() {
     }
     return $ab_yhendus;
 }
+
+// Päringute edastamine andmebaasi
+function saadaAndmed($ab_yhendus, $sql) {
+    $tulemus = mysqli_query($ab_yhendus, $sql);
+    $tulemus = mysqli_query($ab_yhendus, $sql);
+    if($tulemus == false){
+        echo 'Probleem päringuga '.$sql.' <br />';
+        echo mysqli_error($ab_yhendus);
+        echo mysqli_errno($ab_yhendus);
+    } else {
+        return $tulemus; // True v andmed
+    }
+}
