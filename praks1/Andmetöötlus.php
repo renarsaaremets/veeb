@@ -23,3 +23,14 @@ $aeg = $aasta.'-'.$kuu.'-'.$paev;
 echo $aeg.'<br />';
 // Tekitame ühenduse andmebaasiga
 $yhendus = yhendus();
+// Andmete saatmiseks koostame päringu
+$sql = 'INSERT INTO andmed SET '.
+    'eesnimi="'.$eesnimi.'", '.
+    'perenimi="'.$perenimi.'", '.
+    'aeg="'.$aeg.'"';
+// Saadame päringu andmebaaso
+$tulemus = saadaAndmed($yhendus, $sql);
+// Kontrollime
+if($tulemus != false){
+    echo 'Andmed on salvestatud <br />';
+}
